@@ -1,14 +1,10 @@
-import { TextField } from "@mui/material";
+import { Button } from "@mui/material";
 
-function AddButton({ filterText, onFilterTextChange }) {
+function AddButton({ onAdd }) {
   return (
-    <TextField
-      variant="outlined"
-      size="small"
-      label="Search"
-      value={filterText}
-      onChange={(e) => onFilterTextChange(e.target.value)}
-    />
+    <Button variant="contained" color="primary" onClick={onAdd}>
+      Add New Item
+    </Button>
   );
 }
 

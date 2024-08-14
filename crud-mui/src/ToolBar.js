@@ -5,11 +5,11 @@ import SearchBar from "./SearchBar";
 function ToolBar({ filterText, onFilterTextChange, onAdd }) {
   return (
     <Box my={3} display="flex" justifyContent="space-between">
-      <AddButton
+      <SearchBar
         filterText={filterText}
         onFilterTextChange={onFilterTextChange}
       />
-      <SearchBar onAdd={onAdd} />
+      <AddButton onAdd={onAdd} />
     </Box>
   );
 }

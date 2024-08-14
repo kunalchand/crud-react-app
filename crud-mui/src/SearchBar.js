@@ -1,10 +1,14 @@
-import { Button } from "@mui/material";
+import { TextField } from "@mui/material";
 
-function SearchBar({ onAdd }) {
+function SearchBar({ filterText, onFilterTextChange }) {
   return (
-    <Button variant="contained" color="primary" onClick={onAdd}>
-      Add New Item
-    </Button>
+    <TextField
+      variant="outlined"
+      size="small"
+      label="Search"
+      value={filterText}
+      onChange={(e) => onFilterTextChange(e.target.value)}
+    />
   );
 }
 
